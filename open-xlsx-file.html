@@ -1,0 +1,26 @@
+<html>
+<script src="./static/jexcel.js"></script>
+<link rel="stylesheet" href="./static/jexcel.css" type="text/css" />
+<script src="./static/jsuites.js"></script>
+<link rel="stylesheet" href="./static/jsuites.css" type="text/css" />
+
+<script src="./static/jszip.js"></script>
+<script src="./static/xlsx.js"></script>
+
+<div id="spreadsheet4"></div>
+
+<script>
+jexcel.fromSpreadsheet('./test.xlsx', function(result) {
+    if (! result.length) {
+        console.error('jspreadsheet: Something went wrong.');
+    } else {
+    	console.log(result);
+        if (result.length == 1) {
+            jspreadsheet(document.getElementById('spreadsheet4'), result[0]);
+        } else {
+            jexcel.createTabs(document.getElementById('spreadsheet4'), result);
+        }
+    }
+});
+</script>
+</html>
