@@ -12,7 +12,7 @@
 
    http://10.66.14.10:1111/json-excel.html
 
-   <img src="/Users/ludejun/Library/Application Support/typora-user-images/image-20220409202830023.png" alt="image-20220409202830023" style="zoom:50%;" />
+   <img src="./example/image-20220409202830023.png" alt="image-20220409202830023" style="zoom:50%;" />
 
    非常像真实Excel文件，H5打开初始为真实大小，可以左右拖拉无需放大缩小。需要的数据格式比较复杂，需要后端读取excel后返回一个json文件。示例如下：
 
@@ -120,11 +120,15 @@
 
    http://10.66.14.10:1111/open-xlsx-file.html
 
-   <img src="/Users/ludejun/Library/Application Support/typora-user-images/image-20220409202843413.png" alt="image-20220409202843413" style="zoom:50%;" />
+   <img src="./example/image-20220409202843413.png" alt="image-20220409202843413" style="zoom:50%;" />
 
    问题：不支持改变字体大小（文字都一样大），艺术字、文本框、chart、图形不支持，符号、表情支持。
 
    原因：解析excel文件使用的是Sheetjs免费版，收费版Sheetjs Pro支持这些。https://sheetjs.com/pro
+
+
+
+
 
 
 ### 详细比较
