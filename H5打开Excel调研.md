@@ -10,7 +10,7 @@
 
    一般来讲，前端是读不到文件的，需要后端读出Excel文件，并将数据传递给前端并渲染出来，那如何描述excel文件内容及格式就成了关键。
 
-   http://10.66.16.35:1111/json-excel.html
+   http://10.66.14.10:1111/json-excel.html
 
    <img src="/Users/ludejun/Library/Application Support/typora-user-images/image-20220409202830023.png" alt="image-20220409202830023" style="zoom:50%;" />
 
@@ -118,9 +118,14 @@
 
    这种方法比较直接，可以直接打开excel文件，流文件不太确定。打开文件渲染出来基础的excel还比较像，外面的框子和第一个差一点。H5打开比较小，需要手动放大。看起来有优势，但是资源文件大很多，会比较慢。
 
-   http://10.66.16.35:1111/open-xlsx-file.html
+   http://10.66.14.10:1111/open-xlsx-file.html
 
-<img src="/Users/ludejun/Library/Application Support/typora-user-images/image-20220409202843413.png" alt="image-20220409202843413" style="zoom:50%;" />
+   <img src="/Users/ludejun/Library/Application Support/typora-user-images/image-20220409202843413.png" alt="image-20220409202843413" style="zoom:50%;" />
+
+   问题：不支持改变字体大小（文字都一样大），艺术字、文本框、chart、图形不支持，符号、表情支持。
+
+   原因：解析excel文件使用的是Sheetjs免费版，收费版Sheetjs Pro支持这些。https://sheetjs.com/pro
+
 
 ### 详细比较
 
@@ -135,3 +140,19 @@
 
 
 **结论：如果后端读出来的excel格式和需要的json差不多就用第一种方案，如果有较大差异就直接用第二种，想办法解决其他问题。**
+
+
+
+参考文件
+
+open excel start: https://jspreadsheet.com/v8/docs/getting-started
+
+open excel demo: https://bossanova.uk/jspreadsheet/v4/examples/import-data
+
+第二个sdk的在线普通json例子：https://codepen.io/hchiam/pen/qBRzXKK
+
+第一个sdk在线例子（json见源码）：https://myliang.github.io/x-spreadsheet/
+
+第一个sdk api：https://hondrytravis.com/x-spreadsheet-doc/doc/style.html#border-%E8%BE%B9%E6%A1%86%E6%A0%B7%E5%BC%8F
+
+第一个sdk github：https://github.com/myliang/x-spreadsheet
